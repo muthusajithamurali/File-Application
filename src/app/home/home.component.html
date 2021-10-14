@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>WELCOME {{user}}</h1>
+    <div class="row">
+    <div class="col-4"></div>
+    <div class="main">
+        <h1>Upload File</h1><br>
+        <form (ngSubmit)="onUpload()">
+        <input type="file" name=file [(ngModel)]="file" class="form-control"  (change)="onChange($event)">
+        <input type="submit" value=Upload class="btn btn-success"><br><br>
+        </form>
+        <div class="col-4" *ngIf="loading">
+        <h3>loading.....</h3>
+        </div>
+        <button class="mt=2 btn btn-success " (click)="Download()">Download</button>
+    </div>
+</div>  
+</div>
